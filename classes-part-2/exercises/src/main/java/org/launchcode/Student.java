@@ -24,6 +24,10 @@ public class Student {
         nextStudentId++;
     }
 
+    public static void add(Student student) {
+
+    }
+
     public String studentInfo() {
         return (this.name + " has a GPA of: " + this.gpa);
     }
