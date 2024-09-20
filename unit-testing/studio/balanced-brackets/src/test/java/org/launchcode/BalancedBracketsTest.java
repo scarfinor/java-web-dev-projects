@@ -10,4 +10,53 @@ class BalancedBracketsTest {
     public void emptyTest() {
         assertEquals(true, true);
     }
+    @Test
+    public void onlyBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+    }
+    @Test
+    public void nestedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[[[]]]"));
+    }
+    @Test
+    public void mixedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("{[()]}"));
+    }
+    @Test
+    public void incorrectOrderReturnsFalse() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("{[(])}"));
+    }
+    @Test
+    public void unmatchedBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[["));
+    }
+    @Test
+    public void emptyStringReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
+    }
+    @Test
+    public void nonBracketCharactersReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("hello world"));
+    }
+    @Test
+    public void singleOpeningBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
+    }
+    @Test
+    public void singleClosingBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
+    }
+    @Test
+    public void complexNestedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[{()}]"));
+    }
+    @Test
+    public void extraClosingBracketReturnsFalse() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[{}]}"));
+    }
+    @Test
+    public void extraOpeningBracketReturnsFalse() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[{]"));
+    }
+
 }
