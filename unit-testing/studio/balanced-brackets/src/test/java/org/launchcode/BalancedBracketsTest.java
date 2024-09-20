@@ -23,7 +23,7 @@ class BalancedBracketsTest {
         assertTrue(BalancedBrackets.hasBalancedBrackets("{[()]}"));
     }
     @Test
-    public void incorrectOrderReturnsFalse() {
+    public void incorrectOrderReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("{[(])}"));
     }
     @Test
@@ -51,11 +51,11 @@ class BalancedBracketsTest {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[{()}]"));
     }
     @Test
-    public void extraClosingBracketReturnsFalse() {
+    public void extraClosingBracketReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[{}]}"));
     }
     @Test
-    public void extraOpeningBracketReturnsFalse() {
+    public void extraOpeningBracketReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[{]"));
     }
 
