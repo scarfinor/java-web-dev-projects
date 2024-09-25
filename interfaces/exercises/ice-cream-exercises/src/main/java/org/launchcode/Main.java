@@ -11,7 +11,8 @@ public class Main {
 
         flavors.sort(new FlavorComparator());
         //System.out.println(flavors);
-
+        cones.sort(new ConeComparator());
+        //System.out.println(cones);
 
         // TODO: Use a Comparator class to sort the 'flavors' array alphabetically by the 'name' field.
 
