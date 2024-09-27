@@ -7,6 +7,9 @@ public class Course {
     private Teacher instructor;
     private ArrayList<Student> enrolledStudents;
 
+    public Course(String fullStackWebDevelopment, Teacher teacher, ArrayList<Student> students) {
+    }
+
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather than
     //  just the class fields.
 
