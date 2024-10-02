@@ -20,7 +20,7 @@ public abstract class Ingredient {
     public void setName(String name) {
         this.name = name;
     }
-
+;
     public double getCost() {
         return cost;
     }
